@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pop up module</title>
+
+    <style>
+        .cover-page::after {
+            content: "";
+            background-color: rgba(0, 0, 0, .5);
+            height: 100vh;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+
+        #myModule {
+            width: 320px;
+            max-width: 90%;
+            
+            padding: 15px 15px 35px 15px;
+            background-color: bisque;
+            text-align: center;
+            border: 1px solid brown;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgb(8, 8, 8);
+            position: absolute;
+            display: none;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%);
+            color: rgb(70, 70, 70);
+            z-index: 1; 
+        }
+    </style>
+</head>
+
+<body>
+    <h1>POP UP MODULE</h1>
+    <h2>Somtehing, something...</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati qui necessitatibus sint deserunt eius est
+        quos libero harum ad, facere corporis unde laboriosam, asperiores possimus illo, sapiente neque? Nesciunt
+        facere, perferendis iste soluta reiciendis voluptatibus cupiditate animi deleniti. Error hic voluptatem magni
+        veritatis optio laudantium similique dolor sunt aut ea exercitationem dolores laboriosam, qui doloribus
+        quisquam eligendi culpa tempora a aperiam molestiae magnam mollitia necessitatibus iste? Neque, laudantium
+        itaque? Aut totam ex nemo laborum saepe quibusdam nobis facilis repellendus quam in possimus corrupti unde
+        debitis officiis veniam, necessitatibus, aliquam culpa expedita velit rem tenetur. Dolores fuga ab deleniti,
+        hic sed laboriosam quod ducimus, minima eveniet neque debitis pariatur molestiae dolorem ullam voluptate
+        aliquid placeat repellat vel ut nam natus optio quibusdam magnam odio. Rerum corrupti blanditiis esse
+        distinctio alias deserunt quis minima quibusdam, debitis in nulla unde ullam sunt cupiditate odit earum
+        mollitia, facilis inventore assumenda ea deleniti vitae adipisci est. Architecto et sit quis explicabo quisquam
+        ipsum, expedita, maiores qui odio vel labore saepe ratione culpa repellendus in facilis inventore at ut
+        corrupti quos, dolor tenetur ad voluptate! Aspernatur quas vel nemo exercitationem eius asperiores maiores
+        totam voluptatibus. Tempora voluptates aliquid molestias nihil hic, quibusdam nemo excepturi quaerat quia at,
+        consequuntur omnis! Vel minima, illo quaerat neque aut voluptas cumque sequi incidunt repellat! Aperiam
+        deleniti perferendis praesentium quod laboriosam quas dolores, aliquid repellat qui rem numquam ex facilis
+        voluptates, non corrupti sit fuga id natus adipisci! Laboriosam repudiandae, praesentium, veniam quas nemo
+        adipisci sed quisquam modi dicta ad sint quam nulla corrupti. Quo voluptatem fuga quia rem facere ipsa, impedit
+        dolore ad porro facilis, voluptate, culpa minima saepe quam praesentium ipsam nesciunt nam harum illo
+        voluptatibus tempora? Cumque ad quam adipisci pariatur totam expedita possimus sit maxime quae quas ullam
+        nesciunt, maiores dolores blanditiis architecto ea saepe repellat tempora.</p>
+    <button onclick="displayModule()">Display Module</button>
+
+
+    <div id="myModule">
+        <h3>MyModule</h3>
+        <h4>Something, something..</h4>
+        <p>Do you like it?</p>
+        <button id="no">No</button>
+        <button id="yes">Oh, yeaaah!:)</button>
+    </div>
+
+    <script>
+        var myBody = document.getElementsByTagName("body")[0];
+        var myModule = document.getElementById("myModule");
+        console.log(myBody);
+
+        function displayModule() {
+            myBody.classList.add("cover-page");
+            myModule.style.display = "table";
+        }
+    </script>
+</body>
+
+</html>
